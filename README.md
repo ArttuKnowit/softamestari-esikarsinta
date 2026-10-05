@@ -18,6 +18,8 @@ Sarjoja on kaksi: junnut (alle 22-vuotiaat) ja yleinen sarja.
 
 Kisassa tuotettu koodi luovutetaan vapaaseen yleiseen käyttöön (public domain), kuten softamestari.fi kertoo.
 
+Jos tulee ongelmia, ota yhteyttä WhatsAppilla tai tekstiviestillä numeroon 050 374 9132 (Pasi Kovanen).
+
 Ohjeet ovat myös englanniksi alla.
 
 ## In English
@@ -37,5 +39,7 @@ That replaces this text with the qualifier instructions. Start building only aft
 There are two categories: juniors (under 22) and the open category.
 
 Code produced in the contest is released into the public domain, as stated on softamestari.fi.
+
+If you run into problems, contact Pasi Kovanen by WhatsApp or text message at 050 374 9132.
 
 The instructions are also in Finnish above.
