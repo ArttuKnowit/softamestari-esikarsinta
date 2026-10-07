@@ -2,8 +2,6 @@
 
 ## Suomeksi
 
-> **Huom. Windows-käyttäjille:** Tämä tiedosto on UTF-8-muodossa. Jos ääkköset eivät näy komentorivillä oikein (esim. `TÃ¤mÃ¤`), aja PowerShellissä tai komentokehotteessa komento: `chcp 65001`.
-
 Tämä repositorio sisältää Softamestari 2026 -esikarsinnan ohjeet.
 
 Esikarsinta järjestetään torstaina 8.10.2026 klo 17.00–20.00 Suomen aikaa (Europe/Helsinki). Osallistuminen on maksutonta ja tapahtuu etänä omalta koneeltasi.
@@ -25,8 +23,6 @@ Jos tulee ongelmia, ota yhteyttä WhatsAppilla tai tekstiviestillä numeroon 050
 Ohjeet löytyvät alta myös englanniksi.
 
 ## In English
-
-> **Note for Windows users:** This file is encoded in UTF-8. If characters display incorrectly in your command prompt or terminal, switch your terminal to UTF-8 by running: `chcp 65001`.
 
 This repository contains the instructions for the Softamestari 2026 qualifier.
 
