@@ -2,9 +2,11 @@
 
 ## Suomeksi
 
-Tämä repo sisältää Softamestari 2026 -esikarsinnan ohjeet.
+> **Huom. Windows-käyttäjille:** Tämä tiedosto on UTF-8-muodossa. Jos ääkköset eivät näy komentorivillä oikein (esim. `TÃ¤mÃ¤`), aja PowerShellissä tai komentokehotteessa komento: `chcp 65001`.
 
-Esikarsinta on torstaina 8.10.2026 klo 17.00–20.00 Suomen aikaa (Europe/Helsinki). Osallistuminen on maksutonta ja tapahtuu etänä omalta koneeltasi.
+Tämä repositorio sisältää Softamestari 2026 -esikarsinnan ohjeet.
+
+Esikarsinta järjestetään torstaina 8.10.2026 klo 17.00–20.00 Suomen aikaa (Europe/Helsinki). Osallistuminen on maksutonta ja tapahtuu etänä omalta koneeltasi.
 
 Kloonaa tämä repo etukäteen. Ennen klo 17.00 tässä tiedostossa ei ole tehtävänantoa eikä palautusohjetta.
 
@@ -12,17 +14,19 @@ Tasan klo 17.00 aja:
 
     git pull
 
-Silloin tämä teksti vaihtuu esikarsinnan ohjeisiin. Aloita sovelluksen tekeminen vasta sen jälkeen, puhtaalta pöydältä. Valmista sovellusta tai sen pohjaa ei saa rakentaa etukäteen. Yleiset kirjastot, frameworkit ja tekoälytyökalut ovat sallittuja. Omien työkalujen kuluista vastaat itse.
+Silloin tämä teksti päivittyy esikarsinnan tehtävänantoon ja ohjeisiin. Aloita sovelluksen toteutus vasta sen jälkeen, puhtaalta pöydältä. Valmista sovellusta tai sen pohjaa ei saa rakentaa etukäteen. Yleiset kirjastot, frameworkit ja tekoälytyökalut ovat vapaasti sallittuja. Mahdollisista omien työkalujesi kuluista vastaat itse.
 
 Sarjoja on kaksi: junnut (alle 22-vuotiaat) ja yleinen sarja.
 
-Kisassa tuotettu koodi luovutetaan vapaaseen yleiseen käyttöön (public domain), kuten softamestari.fi kertoo.
+Kisassa tuotettu koodi luovutetaan vapaaseen yleiseen käyttöön (public domain), kuten softamestari.fi-sivustolla kerrotaan.
 
 Jos tulee ongelmia, ota yhteyttä WhatsAppilla tai tekstiviestillä numeroon 050 374 9132 (Pasi Kovanen).
 
-Ohjeet ovat myös englanniksi alla.
+Ohjeet löytyvät alta myös englanniksi.
 
 ## In English
+
+> **Note for Windows users:** This file is encoded in UTF-8. If characters display incorrectly in your command prompt or terminal, switch your terminal to UTF-8 by running: `chcp 65001`.
 
 This repository contains the instructions for the Softamestari 2026 qualifier.
 
