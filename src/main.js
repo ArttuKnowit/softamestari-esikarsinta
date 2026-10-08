@@ -1,9 +1,11 @@
 import "./style.css";
+import { renderWelcomeStep } from "./steps/welcomeStep.js";
 import { renderLocationStep } from "./steps/locationStep.js";
 import { renderTargetStep } from "./steps/targetStep.js";
 import { renderPreferencesStep } from "./steps/preferencesStep.js";
 
 const steps = [
+  { id: "step-welcome", render: renderWelcomeStep },
   { id: "step-location", render: renderLocationStep },
   { id: "step-target", render: renderTargetStep },
   { id: "step-preferences", render: renderPreferencesStep },
@@ -18,6 +20,8 @@ const track = document.querySelector(".carousel-track");
 const prevButton = document.querySelector("#btn-prev");
 const nextButton = document.querySelector("#btn-next");
 const dots = document.querySelectorAll(".dot");
+
+track.style.setProperty("--step-count", steps.length);
 
 function renderCurrentStep() {
   if (cleanup) cleanup();
@@ -59,3 +63,4 @@ nextButton.addEventListener("click", () => {
 });
 
 goTo(0);
+document.documentElement.classList.add("ready");

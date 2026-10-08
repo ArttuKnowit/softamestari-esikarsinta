@@ -50,6 +50,19 @@ body {
   color: var(--text);
 }
 
+h1 {
+    align-self: center;
+}
+
+.welcome-text {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    align-self: center;
+    text-align: center;
+    font-size: large;
+}
+
 #app {
   display: flex;
   flex-direction: column;
@@ -65,13 +78,13 @@ body {
 
 .carousel-track {
   display: flex;
-  width: 300%;
+  width: calc(var(--step-count, 4) * 100%);
   height: 100%;
   transition: transform 0.4s ease;
 }
 
 .step {
-  width: calc(100% / 3);
+  width: calc(100% / var(--step-count, 4));
   height: 100%;
   box-sizing: border-box;
   padding: 2rem;
@@ -146,6 +159,65 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 0;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.map-frame {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 180px;
+  border-radius: 12px;
+}
+
+.map-frame .map {
+  transition: opacity 0.3s ease;
+}
+
+.map-frame.loading .map {
+  opacity: 0.55;
+}
+
+/* Ring around the map: a comet-like arc that fades out behind its head. */
+.map-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1001; /* above Leaflet panes and controls */
+  box-sizing: border-box;
+  padding: 4px;
+  border-radius: 12px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: conic-gradient(
+    from var(--angle),
+    transparent 0deg,
+    var(--accent) 100deg,
+    transparent 100.5deg
+  );
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+}
+
+.map-frame.loading::after {
+  opacity: 1;
+  animation: map-ring-spin 1s linear infinite;
+}
+
+@keyframes map-ring-spin {
+  to {
+    --angle: 360deg;
+  }
 }
 
 .button-row {

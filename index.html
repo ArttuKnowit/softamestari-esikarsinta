@@ -5,11 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>The Road Less Traveled</title>
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <!-- Inline so the loader is styled before the main stylesheet and JS arrive. -->
+    <style>
+      html {
+        background: #cfe0c3;
+      }
+      #app {
+        visibility: hidden;
+      }
+      .ready #app {
+        visibility: visible;
+      }
+      #loader {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-items: center;
+      }
+      .ready #loader {
+        display: none;
+      }
+      #loader .spinner {
+        width: 48px;
+        height: 48px;
+        box-sizing: border-box;
+        border: 5px solid rgba(64, 121, 140, 0.25);
+        border-top-color: #40798c;
+        border-radius: 50%;
+        animation: loader-spin 0.9s linear infinite;
+      }
+      @keyframes loader-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        html {
+          background: #0f1c20;
+        }
+        #loader .spinner {
+          border-color: rgba(112, 169, 161, 0.25);
+          border-top-color: #70a9a1;
+        }
+      }
+    </style>
   </head>
   <body>
+    <div id="loader" role="status" aria-label="Ladataan"><div class="spinner"></div></div>
     <div id="app">
       <div class="carousel">
         <div class="carousel-track">
+          <section class="step" id="step-welcome"></section>
           <section class="step" id="step-location"></section>
           <section class="step" id="step-target"></section>
           <section class="step" id="step-preferences"></section>
@@ -21,6 +67,7 @@
           <span class="dot" data-step="0"></span>
           <span class="dot" data-step="1"></span>
           <span class="dot" data-step="2"></span>
+          <span class="dot" data-step="3"></span>
         </div>
         <button id="btn-next" type="button">Seuraava</button>
       </nav>

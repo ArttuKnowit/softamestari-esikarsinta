@@ -9,7 +9,7 @@ const BUDGET_RANGE = { min: 0, max: 200, step: 5 };
 
 // Step 3: budget and interests; valid once at least one interest is selected.
 export function renderPreferencesStep(container, state, { onChange }) {
-  if (state.budget === undefined) state.budget = 50;
+  if (state.budget === undefined) state.budget = 0;
   if (!state.themes) state.themes = [];
 
   container.innerHTML = `

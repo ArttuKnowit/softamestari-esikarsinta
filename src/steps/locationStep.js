@@ -6,7 +6,7 @@ export function renderLocationStep(container, state, { onChange }) {
   container.innerHTML = `
     <h2>Vahvista sijaintisi</h2>
     <p>Napauta karttaa tai käytä laitteen sijaintia ja vahvista valinta.</p>
-    <div class="map"></div>
+    <div class="map-frame"><div class="map"></div></div>
     <div class="button-row">
       <button type="button" class="secondary" id="use-my-location">Käytä sijaintiani</button>
       <button type="button" id="confirm-location" disabled>Vahvista sijainti</button>
@@ -17,6 +17,8 @@ export function renderLocationStep(container, state, { onChange }) {
   const summary = container.querySelector("#location-summary");
   const confirmButton = container.querySelector("#confirm-location");
   const geolocateButton = container.querySelector("#use-my-location");
+  const mapFrame = container.querySelector(".map-frame");
+  let destroyed = false;
 
   const center = state.location
     ? [state.location.lat, state.location.lng]
@@ -42,6 +44,11 @@ export function renderLocationStep(container, state, { onChange }) {
       : "";
   }
 
+  function setLoading(isLoading) {
+    mapFrame.classList.toggle("loading", isLoading);
+    geolocateButton.disabled = isLoading;
+  }
+
   map.on("click", (event) => setPending(event.latlng));
 
   geolocateButton.addEventListener("click", () => {
@@ -49,15 +56,22 @@ export function renderLocationStep(container, state, { onChange }) {
       summary.textContent = "Selain ei tue paikannusta.";
       return;
     }
+    summary.textContent = "";
+    setLoading(true);
     navigator.geolocation.getCurrentPosition(
       ({ coords }) => {
+        if (destroyed) return;
         const latlng = L.latLng(coords.latitude, coords.longitude);
         setPending(latlng);
         map.setView(latlng, 15);
+        setLoading(false);
       },
       () => {
+        if (destroyed) return;
         summary.textContent = "Sijaintia ei voitu hakea. Valitse se kartalta.";
-      }
+        setLoading(false);
+      },
+      { timeout: 15000 }
     );
   });
 
@@ -71,5 +85,8 @@ export function renderLocationStep(container, state, { onChange }) {
   updateSummary();
   onChange(Boolean(state.location));
 
-  return () => map.remove();
+  return () => {
+    destroyed = true;
+    map.remove();
+  };
 }
