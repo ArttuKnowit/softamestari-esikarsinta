@@ -1,0 +1,144 @@
+[
+  {
+    "id": "photo-new-angle",
+    "theme": "culture",
+    "match": ["tourism=attraction", "tourism=artwork", "tourism=gallery", "tourism=museum"],
+    "text": "Ota kohteesta {name} valokuva uudesta kulmasta ja keksi sille uusi nimi."
+  },
+  {
+    "id": "library-book",
+    "theme": "culture",
+    "match": ["amenity=library", "amenity=theatre", "amenity=arts_centre", "amenity=cinema"],
+    "text": "Selvitä, mitä paikassa {name} on tänä viikkona tarjolla."
+  },
+  {
+    "id": "culture-fact",
+    "theme": "culture",
+    "match": ["*"],
+    "text": "Opettele yksi uusi fakta kohteesta {name} ja kerro se jollekulle."
+  },
+  {
+    "id": "history-detail",
+    "theme": "history",
+    "match": ["historic"],
+    "text": "Etsi kohteesta {name} yksityiskohta, jonka et usko muiden huomaavan."
+  },
+  {
+    "id": "history-story",
+    "theme": "history",
+    "match": ["*"],
+    "text": "Keksi kohteelle {name} lyhyt tarina: mitä täällä on voinut tapahtua sata vuotta sitten?"
+  },
+  {
+    "id": "litter-park",
+    "theme": "nature",
+    "match": ["leisure=park", "leisure=garden", "leisure=nature_reserve"],
+    "text": "Poimi kolme roskaa kohteen {name} ympäristöstä ja vie ne roskakoriin."
+  },
+  {
+    "id": "tree-hug",
+    "theme": "nature",
+    "match": ["leisure=park", "leisure=garden", "leisure=nature_reserve"],
+    "text": "Halaa puuta kohteessa {name} – ne ovat ystäviä!"
+  },
+  {
+    "id": "bird-spot",
+    "theme": "nature",
+    "match": ["leisure=park", "leisure=garden", "leisure=nature_reserve", "natural=beach", "natural=spring"],
+    "text": "Tunnista joku lintu kohteen {name} alueella."
+  },
+  {
+    "id": "viewpoint-three",
+    "theme": "nature",
+    "match": ["tourism=viewpoint", "natural=peak"],
+    "text": "Pysähdy kohteessa {name} ja nimeä kolme asiaa, jotka näet maisemassa."
+  },
+  {
+    "id": "nature-listen",
+    "theme": "nature",
+    "match": ["*"],
+    "text": "Seiso hetki hiljaa kohteen {name} lähellä ja laske, montako eri ääntä kuulet."
+  },
+  {
+    "id": "playground-squats",
+    "theme": "active",
+    "match": ["leisure=playground"],
+    "text": "Etsi {name} ja tee siellä 10 kyykkyä."
+  },
+  {
+    "id": "fitness-try",
+    "theme": "active",
+    "match": ["leisure=fitness_station"],
+    "text": "Etsi {name} ja kokeile jokaista laitetta kerran."
+  },
+  {
+    "id": "active-stretch",
+    "theme": "active",
+    "match": ["*"],
+    "text": "Etsi {name} ja tee siellä pieni venyttelyharjoitus."
+  },
+  {
+    "id": "restaurant-new",
+    "theme": "food",
+    "match": ["amenity=restaurant", "amenity=fast_food"],
+    "text": "Kokeile paikasta {name} jotain, mitä et ole koskaan maistanut.",
+    "cost": 8
+  },
+  {
+    "id": "ice-cream",
+    "theme": "food",
+    "match": ["amenity=ice_cream"],
+    "text": "Osta paikasta {name} jäätelö ja kokeile makua, jota et yleensä valitse.",
+    "cost": 4
+  },
+  {
+    "id": "bakery-share",
+    "theme": "food",
+    "match": ["shop=bakery", "shop=deli", "shop=confectionery", "shop=pastry"],
+    "text": "Osta paikasta {name} pieni herkku ja jaa se jonkun kanssa.",
+    "cost": 4
+  },
+  {
+    "id": "food-menu",
+    "theme": "food",
+    "match": ["*"],
+    "text": "Tutustu paikan {name} tarjontaan ja valitse se, minkä ostaisit seuraavalla kerralla."
+  },
+  {
+    "id": "hot-drink",
+    "theme": "cafes",
+    "match": ["amenity=cafe", "shop=coffee", "shop=tea"],
+    "text": "Osta mieleisesi kuuma juoma paikasta {name}.",
+    "cost": 4
+  },
+  {
+    "id": "cafe-people-watch",
+    "theme": "cafes",
+    "match": ["*"],
+    "text": "Keksi paikan {name} edessä kulkevalle ohikulkijalle hauska tarina."
+  },
+  {
+    "id": "refill-water",
+    "theme": "civic",
+    "match": ["amenity=drinking_water", "amenity=fountain"],
+    "text": "Etsi {name} ja täytä vesipullosi tai juo kupillinen vettä."
+  },
+  {
+    "id": "recycle-something",
+    "theme": "civic",
+    "match": ["amenity=recycling"],
+    "text": "Etsi {name} ja kierrätä jotain mukanasi olevaa tai lähistöltä löytämääsi."
+  },
+  {
+    "id": "civic-good-deed",
+    "theme": "civic",
+    "match": ["*"],
+    "text": "Etsi {name} ja tee sen lähellä jotain pientä hyvää, esimerkiksi poimi kolme roskaa."
+  },
+  {
+    "id": "self-gratitude",
+    "theme": "nature",
+    "match": ["*"],
+    "text": "Kiitä itseäsi jostakin, mitä olet tehnyt viimeisen viikon aikana, nappaa paikasta kuva, ja tallenna se puhelimesi muistoihin kiitoksella varustettuna."
+  }
+]

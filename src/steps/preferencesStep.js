@@ -1,9 +1,4 @@
-const THEMES = [
-  { key: "culture", label: "Kulttuuri" },
-  { key: "nature", label: "Luonto" },
-  { key: "food", label: "Ruoka" },
-  { key: "cafes", label: "Kahvilat" },
-];
+import { THEMES } from "../utils/themes.js";
 
 const BUDGET_RANGE = { min: 0, max: 200, step: 5 };
 
@@ -30,8 +25,8 @@ export function renderPreferencesStep(container, state, { onChange }) {
     </div>
     <h3>Mikä kiinnostaa?</h3>
     <div class="theme-options">
-      ${THEMES.map(
-        ({ key, label }) => `
+      ${Object.entries(THEMES).map(
+        ([key, { label }]) => `
         <button type="button" class="theme-option" data-theme="${key}" aria-pressed="false">
           ${label}
         </button>

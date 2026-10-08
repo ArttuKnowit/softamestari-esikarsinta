@@ -32,3 +32,13 @@ Avaa sovellus ja valitse itsellesi seuraavista kategorioista niin monta **teemaa
 Valitse sen jälkeen käytettävissä oleva aika, sekä mahdollinen budjetti (oletuksena 0€).
 
 Sovellus luo sinulle reitin, johon kuuluu muutamia rasteja. V
+
+### Tekniikka ja rastit
+
+Sovellus toimii kokonaan selaimessa. Karttapohjana on OpenStreetMap (Leaflet). Kohteet ja kävelyverkko haetaan Overpass API:sta, ja reitit lasketaan selaimessa omalla A*-reitityksellä (`src/utils/graph.js`, `src/utils/router.js`). Overpass on julkinen palvelu, joten reitin luominen voi kestää hetken.
+
+Reitti kulkee vähintään kahden rastin verran jokaista kilometriä kohden. Siirtymässä reitti on 10–25 % lyhintä reittiä pidempi.
+
+Rastitehtäviä voi muokata tiedostossa `src/utils/tasks.json`. Jokaisella tehtävällä on `theme` (teema), `match` (OSM-tagit, esim. `amenity=cafe`, tai `*` kaikille), `text` (`{name}` korvataan kohteen nimellä) ja valinnainen `cost` (euroa). Teemojen OSM-tagit löytyvät tiedostosta `src/utils/themes.js`.
+
+Testit: `npm test`

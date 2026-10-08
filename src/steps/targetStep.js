@@ -1,7 +1,7 @@
 import L from "leaflet";
 import { createMap, DEFAULT_CENTER } from "../map.js";
 
-const DISTANCE_RANGE = { min: 1, max: 30, step: 1 };
+const DISTANCE_RANGE = { min: 1, max: 12, step: 1 };
 
 // Step 2: choose a target pin (two routes) or a distance (loop route). Returns a cleanup function.
 export function renderTargetStep(container, state, { onChange }) {
@@ -16,7 +16,7 @@ export function renderTargetStep(container, state, { onChange }) {
     </div>
 
     <div id="panel-destination">
-      <p>Napauta karttaa merkitäksesi kohteen. Saat kaksi erilaista reittiä.</p>
+      <p>Napauta karttaa merkitäksesi kohteen (enintään 5 km päähän). Saat kaksi erilaista reittiä.</p>
       <div class="map"></div>
       <p class="location-summary" id="target-summary"></p>
     </div>

@@ -3,6 +3,7 @@ import { renderWelcomeStep } from "./steps/welcomeStep.js";
 import { renderLocationStep } from "./steps/locationStep.js";
 import { renderTargetStep } from "./steps/targetStep.js";
 import { renderPreferencesStep } from "./steps/preferencesStep.js";
+import { showResults } from "./views/resultsView.js";
 
 const steps = [
   { id: "step-welcome", render: renderWelcomeStep },
@@ -20,6 +21,9 @@ const track = document.querySelector(".carousel-track");
 const prevButton = document.querySelector("#btn-prev");
 const nextButton = document.querySelector("#btn-next");
 const dots = document.querySelectorAll(".dot");
+const app = document.querySelector("#app");
+const resultsContainer = document.querySelector("#results");
+let resultsView = null;
 
 track.style.setProperty("--step-count", steps.length);
 
@@ -50,13 +54,29 @@ function goTo(index) {
   updateNav();
 }
 
+function startPlanning() {
+  if (cleanup) cleanup();
+  cleanup = null;
+  app.hidden = true;
+  resultsContainer.hidden = false;
+  resultsView = showResults(resultsContainer, state, { onRestart: restart });
+}
+
+function restart() {
+  resultsView?.destroy();
+  resultsView = null;
+  resultsContainer.hidden = true;
+  app.hidden = false;
+  goTo(0);
+}
+
 prevButton.addEventListener("click", () => {
   if (currentStep > 0) goTo(currentStep - 1);
 });
 
 nextButton.addEventListener("click", () => {
   if (currentStep === steps.length - 1) {
-    console.log("Valinnat valmiit:", state);
+    startPlanning();
     return;
   }
   goTo(currentStep + 1);
