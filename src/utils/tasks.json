@@ -9,19 +9,19 @@
     "id": "library-book",
     "theme": "culture",
     "match": ["amenity=library", "amenity=theatre", "amenity=arts_centre", "amenity=cinema"],
-    "text": "Selvitä, mitä paikassa {name} on tänä viikkona tarjolla."
+    "text": "Selvitä, mitä paikassa {name} on tällä viikkona tarjolla."
   },
   {
     "id": "culture-fact",
     "theme": "culture",
     "match": ["*"],
-    "text": "Opettele yksi uusi fakta kohteesta {name} ja kerro se jollekulle."
+    "text": "Opettele yksi uusi fakta kohteesta {name}. Paina se muistiisi."
   },
   {
     "id": "history-detail",
     "theme": "history",
     "match": ["historic"],
-    "text": "Etsi kohteesta {name} yksityiskohta, jonka et usko muiden huomaavan."
+    "text": "Etsi kohteesta {name} yksityiskohta, jota et usko muiden huomaavan."
   },
   {
     "id": "history-story",
@@ -39,7 +39,7 @@
     "id": "tree-hug",
     "theme": "nature",
     "match": ["leisure=park", "leisure=garden", "leisure=nature_reserve"],
-    "text": "Halaa puuta kohteessa {name} – ne ovat ystäviä!"
+    "text": "Halaa puuta kohteessa {name}!"
   },
   {
     "id": "bird-spot",
@@ -75,7 +75,7 @@
     "id": "active-stretch",
     "theme": "active",
     "match": ["*"],
-    "text": "Etsi {name} ja tee siellä pieni venyttelyharjoitus."
+    "text": "Etsi {name} ja venyttele minuutin ajan."
   },
   {
     "id": "restaurant-new",
